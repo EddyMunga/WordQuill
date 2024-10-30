@@ -1,4 +1,4 @@
-package com.eddy.wordquill;
+package com.eddy.wordquill.repository;
 
 import com.eddy.wordquill.models.Quill;
 import org.springframework.data.mongodb.repository.MongoRepository;
