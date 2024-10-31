@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -21,4 +23,9 @@ public class Impressions {
     @ManyToOne
     @JoinColumn(name = "quill")
     private Quill quill;
+
+    @ManyToOne
+    @JoinColumn(name = "comment_id", nullable = false)
+    private Comments comments;
+
 }

@@ -23,6 +23,8 @@ public class Quill {
     private String author;
     private String timestamp;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "quill", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -31,6 +33,6 @@ public class Quill {
     @OneToMany(mappedBy = "quill", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comments> comments;
 
-    @OneToMany(mappedBy = "quill", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "impressions", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Impressions> impressions;
 }

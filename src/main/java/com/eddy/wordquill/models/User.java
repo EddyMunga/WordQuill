@@ -21,6 +21,7 @@ public class User {
     private int followers;
     private int following;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Quill> quills;
 
     @OneToOne(mappedBy = "quill", cascade = CascadeType.ALL, orphanRemoval = true)

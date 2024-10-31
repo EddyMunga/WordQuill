@@ -19,6 +19,8 @@ public class Comments {
     public Long id;
     public String author;
     private String timestamp;
+
+    @OneToMany(mappedBy = "comment", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Impressions> impression;
     @ManyToOne
     @JoinColumn(name = "quill")
